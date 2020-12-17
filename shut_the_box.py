@@ -58,7 +58,7 @@ def shut_the_box(name):
 
   while question1 not in response:
     question1 = (input('\n\nDo you know how to play Shut the Box? (Y/N)  ')).upper().strip()
-  if question1 == 'N' or question1 == 'No':
+  if question1 == 'N' or question1 == 'NO':
     print(instructions)
     time.sleep(2)
     input('\n\nRespond with anything when you are ready to move on  ')
@@ -207,7 +207,7 @@ def shut_the_box(name):
   else:
     while question4 not in response:
       question4 = (input('\n\nWith 7, 8, and 9 gone, you may now choose to only roll one die. Roll one die? (Y/N)  ')).upper().strip()
-    if question4 == 'Y' or question4 == 'Yes':
+    if question4 == 'Y' or question4 == 'YES':
       #one die move:
       time.sleep(2)
       print('\n\tFourth roll...')
@@ -315,7 +315,7 @@ def shut_the_box(name):
   else:
     while question5 not in response:
       question5 = (input('\n\nWith 7, 8, and 9 gone, you may now choose to only roll one die. Roll one die? (Y/N)  ')).upper().strip()
-    if question5 == 'Y' or question5 == 'Yes':
+    if question5 == 'Y' or question5 == 'YES':
       #one die move:
       time.sleep(2)
       print('\n\tFifth roll...')
@@ -423,7 +423,7 @@ def shut_the_box(name):
   else:
     while question6 not in response:
       question6 = (input('\n\nWith 7, 8, and 9 gone, you may now choose to only roll one die. Roll one die? (Y/N)  ')).upper().strip()
-    if question6 == 'Y' or question6 == 'Yes':
+    if question6 == 'Y' or question6 == 'YES':
       #one die move:
       time.sleep(2)
       print('\n\tSixth roll...')
@@ -531,7 +531,7 @@ def shut_the_box(name):
   else:
     while question7 not in response:
       question7 = (input('\n\nWith 7, 8, and 9 gone, you may now choose to only roll one die. Roll one die? (Y/N)  ')).upper().strip()
-    if question7 == 'Y' or question7 == 'Yes':
+    if question7 == 'Y' or question7 == 'YES':
       #one die move:
       time.sleep(2)
       print('\n\tSeventh roll...')
@@ -639,7 +639,7 @@ def shut_the_box(name):
   else:
     while question8 not in response:
       question8 = (input('\n\nWith 7, 8, and 9 gone, you may now choose to only roll one die. Roll one die? (Y/N)  ')).upper().strip()
-    if question8 == 'Y' or question8 == 'Yes':
+    if question8 == 'Y' or question8 == 'YES':
       #one die move:
       time.sleep(2)
       print('\n\tEighth roll...')
@@ -747,7 +747,7 @@ def shut_the_box(name):
   else:
     while question9 not in response:
       question9 = (input('\n\nWith 7, 8, and 9 gone, you may now choose to only roll one die. Roll one die? (Y/N)  ')).upper().strip()
-    if question9 == 'Y' or question9 == 'Yes':
+    if question9 == 'Y' or question9 == 'YES':
       #one die move:
       time.sleep(2)
       print('\n\tNinth roll...')

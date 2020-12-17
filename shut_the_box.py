@@ -821,4 +821,4 @@ def shut_the_box(name):
 
 
 if __name__ == '__main__':
-  shut_the_box(input("Welcome to the Pub, what shall ye be called?  "))
+  shut_the_box(input("\n\nWelcome to the Pub, what shall ye be called?  "))

@@ -1,6 +1,6 @@
 # shut_the_box_game
 Shut the Box
-- run the .py file to play the game!
+- run the shut_the_box.py file to play the game!
 
 To play on Google Colab, run these 3 commands:
 

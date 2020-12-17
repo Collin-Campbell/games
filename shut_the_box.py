@@ -9,6 +9,8 @@ Original file is located at
 
 instructions = """
 
+Instructions from: https://www.mastersofgames.com/rules/shut-box-rules.htm
+
 A round of the game consists of each player taking one turn to try to shut the box. 
 A turn consists of a player repeatedly throwing the dice until he or she cannot continue. 
 

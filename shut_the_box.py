@@ -277,7 +277,7 @@ def shut_the_box(name):
 
   #Fifth round (7, 8, 9, could be gone, so must check first!)
   if len(box) == 0:
-    return print('Congratulations! You won!')
+    return print('\n\nCongratulations! You won!')
   if ('7' in box) or ('8' in box) or ('9' in box):
     time.sleep(2)
     print('\n\tFifth roll...')
@@ -385,7 +385,7 @@ def shut_the_box(name):
 
   # Sixth round (7, 8, 9, could be gone, so must check first!)
   if len(box) == 0:
-    return print('Congratulations! You won!')
+    return print('\n\nCongratulations! You won!')
   if ('7' in box) or ('8' in box) or ('9' in box):
     time.sleep(2)
     print('\n\tSixth roll...')
@@ -493,7 +493,7 @@ def shut_the_box(name):
 
   # Seventh round (7, 8, 9, could be gone, so must check first!)
   if len(box) == 0:
-    return print('Congratulations! You won!')
+    return print('\n\nCongratulations! You won!')
   if ('7' in box) or ('8' in box) or ('9' in box):
     time.sleep(2)
     print('\n\tSeventh roll...')
@@ -601,7 +601,7 @@ def shut_the_box(name):
 
   # Eighth round (7, 8, 9, could be gone, so must check first!)
   if len(box) == 0:
-    return print('Congratulations! You won!')
+    return print('\n\nCongratulations! You won!')
   if ('7' in box) or ('8' in box) or ('9' in box):
     time.sleep(2)
     print('\n\tEighth roll...')
@@ -709,7 +709,7 @@ def shut_the_box(name):
 
   # Ninth round (7, 8, 9, could be gone, so must check first!)
   if len(box) == 0:
-    return print('Congratulations! You won!')
+    return print('\n\nCongratulations! You won!')
   if ('7' in box) or ('8' in box) or ('9' in box):
     time.sleep(2)
     print('\n\tNinth roll...')

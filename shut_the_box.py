@@ -76,9 +76,9 @@ def shut_the_box(name):
   time.sleep(2)
   sum1 = 0
   while sum1 != int(first_roll):
-    first_move = list(set((input('\nHow will you play? (ex: 1, 3, 4)  ')).strip().split(', ')))
+    first_move = list(set((input('\nHow will you play? (ex: 1, 3, 4)  ')).upper().strip().split(',')))
     for item in first_move:
-      if item == 'Done':
+      if item == 'DONE':
         score = 0
         for num in box:
           score += int(num)
@@ -87,17 +87,17 @@ def shut_the_box(name):
         break
     sum1_1 = 0
     for num in first_move:
-      sum1_1 += int(num)
+      sum1_1 += int(num.strip())
     # need to verify that the numbers chosen are still in box
     for num in first_move:
-      if num in box:
+      if num.strip() in box:
         continue
       else:
         sum1 = 0
     sum1 = sum1_1
   # need to remove decision from box
   for num in first_move:
-    box.remove(num)
+    box.remove(num.strip())
   time.sleep(2)
   print('\n\nYour updated box:', box)
 
@@ -110,9 +110,9 @@ def shut_the_box(name):
   time.sleep(2)
   sum2 = 0
   while sum2 != int(second_roll):
-    second_move = list(set((input('\nHow will you play? (ex: 1, 3, 4)  ')).strip().split(', ')))
+    second_move = list(set((input('\nHow will you play? (ex: 1, 3, 4)  ')).upper().strip().split(',')))
     for item in second_move:
-      if item == 'Done':
+      if item == 'DONE':
         score = 0
         for num in box:
           score += int(num)
@@ -121,17 +121,17 @@ def shut_the_box(name):
         break
     sum2_2 = 0
     for num in second_move:
-      sum2_2 += int(num)
+      sum2_2 += int(num.strip())
     # need to verify that the numbers chosen are still in box
     for num in second_move:
-      if num in box:
+      if num.strip() in box:
         continue
       else:
         sum2 = 0
     sum2 = sum2_2
   # need to remove decision from box
   for num in second_move:
-    box.remove(num)
+    box.remove(num.strip())
   time.sleep(2)
   print('\n\nYour updated box:', box)
 
@@ -144,9 +144,9 @@ def shut_the_box(name):
   time.sleep(2)
   sum3 = 0
   while sum3 != int(third_roll):
-    third_move = list(set((input('\nHow will you play? (ex: 1, 3, 4)  ')).strip().split(', ')))
+    third_move = list(set((input('\nHow will you play? (ex: 1, 3, 4)  ')).upper().strip().split(',')))
     for item in third_move:
-      if item == 'Done':
+      if item == 'DONE':
         score = 0
         for num in box:
           score += int(num)
@@ -155,17 +155,17 @@ def shut_the_box(name):
         break
     sum3_3 = 0
     for num in third_move:
-      sum3_3 += int(num)
+      sum3_3 += int(num.strip())
     # need to verify that the numbers chosen are still in box
     for num in third_move:
-      if num in box:
+      if num.strip() in box:
         continue
       else:
         sum3 = 0
     sum3 = sum3_3
   # need to remove decision from box
   for num in third_move:
-    box.remove(num)
+    box.remove(num.strip())
   time.sleep(2)
   print('\n\nYour updated box:', box)
 
@@ -179,9 +179,9 @@ def shut_the_box(name):
     time.sleep(2)
     sum4 = 0
     while sum4 != int(fourth_roll):
-      fourth_move = list(set((input('\nHow will you play? (ex: 1, 3, 4)  ')).strip().split(', ')))
+      fourth_move = list(set((input('\nHow will you play? (ex: 1, 3, 4)  ')).upper().strip().split(',')))
       for item in fourth_move:
-        if item == 'Done':
+        if item == 'DONE':
           score = 0
           for num in box:
             score += int(num)
@@ -190,17 +190,17 @@ def shut_the_box(name):
           break
       sum4_4 = 0
       for num in fourth_move:
-        sum4_4 += int(num)
+        sum4_4 += int(num.strip())
     # need to verify that the numbers chosen are still in box
       for num in fourth_move:
-        if num in box:
+        if num.strip() in box:
           continue
         else:
           sum4 = 0
       sum4 = sum4_4
     # need to remove decision from box
     for num in fourth_move:
-      box.remove(num)
+      box.remove(num.strip())
     time.sleep(2)
     print('\n\nYour updated box:', box)
   # if 7, 8, 9 are all gone, player may use one dice
@@ -217,9 +217,9 @@ def shut_the_box(name):
       time.sleep(2)
       sum4 = 0
       while sum4 != int(fourth_roll):
-        fourth_move = list(set((input('\nHow will you play? (ex: 1, 3, 4)  ')).strip().split(', ')))
+        fourth_move = list(set((input('\nHow will you play? (ex: 1, 3, 4)  ')).upper().strip().split(',')))
         for item in fourth_move:
-          if item == 'Done':
+          if item == 'DONE':
             score = 0
             for num in box:
               score += int(num)
@@ -228,17 +228,17 @@ def shut_the_box(name):
             break
         sum4_4 = 0
         for num in fourth_move:
-          sum4_4 += int(num)
+          sum4_4 += int(num.strip())
       # need to verify that the numbers chosen are still in box
         for num in fourth_move:
-          if num in box:
+          if num.strip() in box:
             continue
           else:
             sum4 = 0
         sum4 = sum4_4
       # need to remove decision from box
       for num in fourth_move:
-        box.remove(num)
+        box.remove(num.strip())
       time.sleep(2)
       print('\n\nYour updated box:', box)
     else:
@@ -250,9 +250,9 @@ def shut_the_box(name):
       time.sleep(2)
       sum4 = 0
       while sum4 != int(fourth_roll):
-        fourth_move = list(set((input('\nHow will you play? (ex: 1, 3, 4)  ')).strip().split(', ')))
+        fourth_move = list(set((input('\nHow will you play? (ex: 1, 3, 4)  ')).upper().strip().split(',')))
         for item in fourth_move:
-          if item == 'Done':
+          if item == 'DONE':
             score = 0
             for num in box:
               score += int(num)
@@ -261,17 +261,17 @@ def shut_the_box(name):
             break
         sum4_4 = 0
         for num in fourth_move:
-          sum4_4 += int(num)
+          sum4_4 += int(num.strip())
       # need to verify that the numbers chosen are still in box
         for num in fourth_move:
-          if num in box:
+          if num.strip() in box:
             continue
           else:
             sum4 = 0
         sum4 = sum4_4
       # need to remove decision from box
       for num in fourth_move:
-        box.remove(num)
+        box.remove(num.strip())
       time.sleep(2)
       print('\n\nYour updated box:', box)
 
@@ -287,9 +287,9 @@ def shut_the_box(name):
     time.sleep(2)
     sum5 = 0
     while sum5 != int(fifth_roll):
-      fifth_move = list(set((input('\nHow will you play? (ex: 1, 3, 4)  ')).strip().split(', ')))
+      fifth_move = list(set((input('\nHow will you play? (ex: 1, 3, 4)  ')).upper().strip().split(',')))
       for item in fifth_move:
-        if item == 'Done':
+        if item == 'DONE':
           score = 0
           for num in box:
             score += int(num)
@@ -298,17 +298,17 @@ def shut_the_box(name):
           break
       sum5_5 = 0
       for num in fifth_move:
-        sum5_5 += int(num)
+        sum5_5 += int(num.strip())
     # need to verify that the numbers chosen are still in box
       for num in fifth_move:
-        if num in box:
+        if num.strip() in box:
           continue
         else:
           sum5 = 0
       sum5 = sum5_5
     # need to remove decision from box
     for num in fifth_move:
-      box.remove(num)
+      box.remove(num.strip())
     time.sleep(2)
     print('\n\nYour updated box:', box)
   # if 7, 8, 9 are all gone, player may use one dice
@@ -325,9 +325,9 @@ def shut_the_box(name):
       time.sleep(2)
       sum5 = 0
       while sum5 != int(fifth_roll):
-        fifth_move = list(set((input('\nHow will you play? (ex: 1, 3, 4)  ')).strip().split(', ')))
+        fifth_move = list(set((input('\nHow will you play? (ex: 1, 3, 4)  ')).upper().strip().split(',')))
         for item in fifth_move:
-          if item == 'Done':
+          if item == 'DONE':
             score = 0
             for num in box:
               score += int(num)
@@ -336,17 +336,17 @@ def shut_the_box(name):
             break
         sum5_5 = 0
         for num in fifth_move:
-          sum5_5 += int(num)
+          sum5_5 += int(num.strip())
       # need to verify that the numbers chosen are still in box
         for num in fifth_move:
-          if num in box:
+          if num.strip() in box:
             continue
           else:
             sum5 = 0
         sum5 = sum5_5
       # need to remove decision from box
       for num in fifth_move:
-        box.remove(num)
+        box.remove(num.strip())
       time.sleep(2)
       print('\n\nYour updated box:', box)
     else:
@@ -358,9 +358,9 @@ def shut_the_box(name):
       time.sleep(2)
       sum5 = 0
       while sum5 != int(fifth_roll):
-        fifth_move = list(set((input('\nHow will you play? (ex: 1, 3, 4)  ')).strip().split(', ')))
+        fifth_move = list(set((input('\nHow will you play? (ex: 1, 3, 4)  ')).upper().strip().split(',')))
         for item in fifth_move:
-          if item == 'Done':
+          if item == 'DONE':
             score = 0
             for num in box:
               score += int(num)
@@ -369,17 +369,17 @@ def shut_the_box(name):
             break
         sum5_5 = 0
         for num in fifth_move:
-          sum5_5 += int(num)
+          sum5_5 += int(num.strip())
       # need to verify that the numbers chosen are still in box
         for num in fifth_move:
-          if num in box:
+          if num.strip() in box:
             continue
           else:
             sum5 = 0
         sum5 = sum5_5
       # need to remove decision from box
       for num in fifth_move:
-        box.remove(num)
+        box.remove(num.strip())
       time.sleep(2)
       print('\n\nYour updated box:', box)
 
@@ -395,9 +395,9 @@ def shut_the_box(name):
     time.sleep(2)
     sum6 = 0
     while sum6 != int(sixth_roll):
-      sixth_move = list(set((input('\nHow will you play? (ex: 1, 3, 4)  ')).strip().split(', ')))
+      sixth_move = list(set((input('\nHow will you play? (ex: 1, 3, 4)  ')).upper().strip().split(',')))
       for item in sixth_move:
-        if item == 'Done':
+        if item == 'DONE':
           score = 0
           for num in box:
             score += int(num)
@@ -406,17 +406,17 @@ def shut_the_box(name):
           break
       sum6_6 = 0
       for num in sixth_move:
-        sum6_6 += int(num)
+        sum6_6 += int(num.strip())
     # need to verify that the numbers chosen are still in box
       for num in sixth_move:
-        if num in box:
+        if num.strip() in box:
           continue
         else:
           sum6 = 0
       sum6 = sum6_6
     # need to remove decision from box
     for num in sixth_move:
-      box.remove(num)
+      box.remove(num.strip())
     time.sleep(2)
     print('\n\nYour updated box:', box)
   # if 7, 8, 9 are all gone, player may use one dice
@@ -433,9 +433,9 @@ def shut_the_box(name):
       time.sleep(2)
       sum6 = 0
       while sum6 != int(sixth_roll):
-        sixth_move = list(set((input('\nHow will you play? (ex: 1, 3, 4)  ')).strip().split(', ')))
+        sixth_move = list(set((input('\nHow will you play? (ex: 1, 3, 4)  ')).upper().strip().split(',')))
         for item in sixth_move:
-          if item == 'Done':
+          if item == 'DONE':
             score = 0
             for num in box:
               score += int(num)
@@ -444,17 +444,17 @@ def shut_the_box(name):
             break
         sum6_6 = 0
         for num in sixth_move:
-          sum6_6 += int(num)
+          sum6_6 += int(num.strip())
       # need to verify that the numbers chosen are still in box
         for num in sixth_move:
-          if num in box:
+          if num.strip() in box:
             continue
           else:
             sum6 = 0
         sum6 = sum6_6
       # need to remove decision from box
       for num in sixth_move:
-        box.remove(num)
+        box.remove(num.strip())
       time.sleep(2)
       print('\n\nYour updated box:', box)
     else:
@@ -466,9 +466,9 @@ def shut_the_box(name):
       time.sleep(2)
       sum6 = 0
       while sum6 != int(sixth_roll):
-        sixth_move = list(set((input('\nHow will you play? (ex: 1, 3, 4)  ')).strip().split(', ')))
+        sixth_move = list(set((input('\nHow will you play? (ex: 1, 3, 4)  ')).upper().strip().split(',')))
         for item in sixth_move:
-          if item == 'Done':
+          if item == 'DONE':
             score = 0
             for num in box:
               score += int(num)
@@ -477,17 +477,17 @@ def shut_the_box(name):
             break
         sum6_6 = 0
         for num in sixth_move:
-          sum6_6 += int(num)
+          sum6_6 += int(num.strip())
       # need to verify that the numbers chosen are still in box
         for num in sixth_move:
-          if num in box:
+          if num.strip() in box:
             continue
           else:
             sum6 = 0
         sum6 = sum6_6
       # need to remove decision from box
       for num in sixth_move:
-        box.remove(num)
+        box.remove(num.strip())
       time.sleep(2)
       print('\n\nYour updated box:', box)
 
@@ -503,9 +503,9 @@ def shut_the_box(name):
     time.sleep(2)
     sum7 = 0
     while sum7 != int(seventh_roll):
-      seventh_move = list(set((input('\nHow will you play? (ex: 1, 3, 4)  ')).strip().split(', ')))
+      seventh_move = list(set((input('\nHow will you play? (ex: 1, 3, 4)  ')).upper().strip().split(',')))
       for item in seventh_move:
-        if item == 'Done':
+        if item == 'DONE':
           score = 0
           for num in box:
             score += int(num)
@@ -514,17 +514,17 @@ def shut_the_box(name):
           break
       sum7_7 = 0
       for num in seventh_move:
-        sum7_7 += int(num)
+        sum7_7 += int(num.strip())
     # need to verify that the numbers chosen are still in box
       for num in seventh_move:
-        if num in box:
+        if num.strip() in box:
           continue
         else:
           sum7 = 0
       sum7 = sum7_7
     # need to remove decision from box
     for num in seventh_move:
-      box.remove(num)
+      box.remove(num.strip())
     time.sleep(2)
     print('\n\nYour updated box:', box)
   # if 7, 8, 9 are all gone, player may use one dice
@@ -541,9 +541,9 @@ def shut_the_box(name):
       time.sleep(2)
       sum7 = 0
       while sum7 != int(seventh_roll):
-        seventh_move = list(set((input('\nHow will you play? (ex: 1, 3, 4)  ')).strip().split(', ')))
+        seventh_move = list(set((input('\nHow will you play? (ex: 1, 3, 4)  ')).upper().strip().split(',')))
         for item in seventh_move:
-          if item == 'Done':
+          if item == 'DONE':
             score = 0
             for num in box:
               score += int(num)
@@ -552,17 +552,17 @@ def shut_the_box(name):
             break
         sum7_7 = 0
         for num in seventh_move:
-          sum7_7 += int(num)
+          sum7_7 += int(num.strip())
       # need to verify that the numbers chosen are still in box
         for num in seventh_move:
-          if num in box:
+          if num.strip() in box:
             continue
           else:
             sum7 = 0
         sum7 = sum7_7
       # need to remove decision from box
       for num in seventh_move:
-        box.remove(num)
+        box.remove(num.strip())
       time.sleep(2)
       print('\n\nYour updated box:', box)
     else:
@@ -574,9 +574,9 @@ def shut_the_box(name):
       time.sleep(2)
       sum7 = 0
       while sum7 != int(seventh_roll):
-        seventh_move = list(set((input('\nHow will you play? (ex: 1, 3, 4)  ')).strip().split(', ')))
+        seventh_move = list(set((input('\nHow will you play? (ex: 1, 3, 4)  ')).upper().strip().split(',')))
         for item in seventh_move:
-          if item == 'Done':
+          if item == 'DONE':
             score = 0
             for num in box:
               score += int(num)
@@ -585,17 +585,17 @@ def shut_the_box(name):
             break
         sum7_7 = 0
         for num in seventh_move:
-          sum7_7 += int(num)
+          sum7_7 += int(num.strip())
       # need to verify that the numbers chosen are still in box
         for num in seventh_move:
-          if num in box:
+          if num.strip() in box:
             continue
           else:
             sum7 = 0
         sum7 = sum7_7
       # need to remove decision from box
       for num in seventh_move:
-        box.remove(num)
+        box.remove(num.strip())
       time.sleep(2)
       print('\n\nYour updated box:', box)
 
@@ -611,9 +611,9 @@ def shut_the_box(name):
     time.sleep(2)
     sum8 = 0
     while sum8 != int(eighth_roll):
-      eighth_move = list(set((input('\nHow will you play? (ex: 1, 3, 4)  ')).strip().split(', ')))
+      eighth_move = list(set((input('\nHow will you play? (ex: 1, 3, 4)  ')).upper().strip().split(',')))
       for item in eighth_move:
-        if item == 'Done':
+        if item == 'DONE':
           score = 0
           for num in box:
             score += int(num)
@@ -622,17 +622,17 @@ def shut_the_box(name):
           break
       sum8_8 = 0
       for num in eighth_move:
-        sum8_8 += int(num)
+        sum8_8 += int(num.strip())
     # need to verify that the numbers chosen are still in box
       for num in eighth_move:
-        if num in box:
+        if num.strip() in box:
           continue
         else:
           sum8 = 0
       sum8 = sum8_8
     # need to remove decision from box
     for num in eighth_move:
-      box.remove(num)
+      box.remove(num.strip())
     time.sleep(2)
     print('\n\nYour updated box:', box)
   # if 7, 8, 9 are all gone, player may use one dice
@@ -649,9 +649,9 @@ def shut_the_box(name):
       time.sleep(2)
       sum8 = 0
       while sum8 != int(eighth_roll):
-        eighth_move = list(set((input('\nHow will you play? (ex: 1, 3, 4)  ')).strip().split(', ')))
+        eighth_move = list(set((input('\nHow will you play? (ex: 1, 3, 4)  ')).upper().strip().split(',')))
         for item in eighth_move:
-          if item == 'Done':
+          if item == 'DONE':
             score = 0
             for num in box:
               score += int(num)
@@ -660,17 +660,17 @@ def shut_the_box(name):
             break
         sum8_8 = 0
         for num in eighth_move:
-          sum8_8 += int(num)
+          sum8_8 += int(num.strip())
       # need to verify that the numbers chosen are still in box
         for num in eighth_move:
-          if num in box:
+          if num.strip() in box:
             continue
           else:
             sum8 = 0
         sum8 = sum8_8
       # need to remove decision from box
       for num in eighth_move:
-        box.remove(num)
+        box.remove(num.strip())
       time.sleep(2)
       print('\n\nYour updated box:', box)
     else:
@@ -682,9 +682,9 @@ def shut_the_box(name):
       time.sleep(2)
       sum8 = 0
       while sum8 != int(eighth_roll):
-        eighth_move = list(set((input('\nHow will you play? (ex: 1, 3, 4)  ')).strip().split(', ')))
+        eighth_move = list(set((input('\nHow will you play? (ex: 1, 3, 4)  ')).upper().strip().split(',')))
         for item in eighth_move:
-          if item == 'Done':
+          if item == 'DONE':
             score = 0
             for num in box:
               score += int(num)
@@ -693,17 +693,17 @@ def shut_the_box(name):
             break
         sum8_8 = 0
         for num in eighth_move:
-          sum8_8 += int(num)
+          sum8_8 += int(num.strip())
       # need to verify that the numbers chosen are still in box
         for num in eighth_move:
-          if num in box:
+          if num.strip() in box:
             continue
           else:
             sum8 = 0
         sum8 = sum8_8
       # need to remove decision from box
       for num in eighth_move:
-        box.remove(num)
+        box.remove(num.strip())
       time.sleep(2)
       print('\n\nYour updated box:', box)
 
@@ -719,9 +719,9 @@ def shut_the_box(name):
     time.sleep(2)
     sum9 = 0
     while sum9 != int(ninth_roll):
-      ninth_move = list(set((input('\nHow will you play? (ex: 1, 3, 4)  ')).strip().split(', ')))
+      ninth_move = list(set((input('\nHow will you play? (ex: 1, 3, 4)  ')).upper().strip().split(',')))
       for item in ninth_move:
-        if item == 'Done':
+        if item == 'DONE':
           score = 0
           for num in box:
             score += int(num)
@@ -730,17 +730,17 @@ def shut_the_box(name):
           break
       sum9_9 = 0
       for num in ninth_move:
-        sum9_9 += int(num)
+        sum9_9 += int(num.strip())
     # need to verify that the numbers chosen are still in box
       for num in ninth_move:
-        if num in box:
+        if num.strip() in box:
           continue
         else:
           sum9 = 0
       sum9 = sum9_9
     # need to remove decision from box
     for num in ninth_move:
-      box.remove(num)
+      box.remove(num.strip())
     time.sleep(2)
     print('\n\nYour updated box:', box)
   # if 7, 8, 9 are all gone, player may use one dice
@@ -757,9 +757,9 @@ def shut_the_box(name):
       time.sleep(2)
       sum9 = 0
       while sum9 != int(ninth_roll):
-        ninth_move = list(set((input('\nHow will you play? (ex: 1, 3, 4)  ')).strip().split(', ')))
+        ninth_move = list(set((input('\nHow will you play? (ex: 1, 3, 4)  ')).upper().strip().split(',')))
         for item in ninth_move:
-          if item == 'Done':
+          if item == 'DONE':
             score = 0
             for num in box:
               score += int(num)
@@ -768,17 +768,17 @@ def shut_the_box(name):
             break
         sum9_9 = 0
         for num in ninth_move:
-          sum9_9 += int(num)
+          sum9_9 += int(num.strip())
       # need to verify that the numbers chosen are still in box
         for num in ninth_move:
-          if num in box:
+          if num.strip() in box:
             continue
           else:
             sum9 = 0
         sum9 = sum9_9
       # need to remove decision from box
       for num in ninth_move:
-        box.remove(num)
+        box.remove(num.strip())
       time.sleep(2)
       print('\n\nYour updated box:', box)
     else:
@@ -790,9 +790,9 @@ def shut_the_box(name):
       time.sleep(2)
       sum9 = 0
       while sum9 != int(ninth_roll):
-        ninth_move = list(set((input('\nHow will you play? (ex: 1, 3, 4)  ')).strip().split(', ')))
+        ninth_move = list(set((input('\nHow will you play? (ex: 1, 3, 4)  ')).upper().strip().split(',')))
         for item in ninth_move:
-          if item == 'Done':
+          if item == 'DONE':
             score = 0
             for num in box:
               score += int(num)
@@ -801,22 +801,22 @@ def shut_the_box(name):
             break
         sum9_9 = 0
         for num in ninth_move:
-          sum9_9 += int(num)
+          sum9_9 += int(num.strip())
       # need to verify that the numbers chosen are still in box
         for num in ninth_move:
-          if num in box:
+          if num.strip() in box:
             continue
           else:
             sum9 = 0
         sum9 = sum9_9
       # need to remove decision from box
       for num in ninth_move:
-        box.remove(num)
+        box.remove(num.strip())
       time.sleep(2)
       print('\n\nYour updated box:', box)
       
   if len(box) == 0:
-    return print('Congratulations! You won!')
+    return print('\n\nCongratulations! You won!')
 
 
 

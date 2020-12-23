@@ -90,10 +90,11 @@ def round(level):
     else:
         print('\n\nWhew!\n\n')
 
-    time.sleep(3)
+    time.sleep(7)
 
 
 if __name__ == '__main__':
+    print('\n\nMake it through 10 levels to win the game... good luck!\n\n')
     for num in range(1,11):
         round(num)
     print('\n\nCongratulations! You survived!\n\n')

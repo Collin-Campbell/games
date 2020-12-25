@@ -86,7 +86,7 @@ def round(level):
     mydict = {'a':a,'b':b,'c':c,'d':d,'e':e}
 
     if (mydict[answer.lower()[0]])[int(answer[1])-1] == 'BOOM!':
-        sys.exit("\n\nOops... better luck next time!\n\n")
+        sys.exit("\n\nOuch... better luck next time!\n\n")
     else:
         print('\n\nWhew!\n\n')
 

@@ -20,7 +20,7 @@ class Hand:
     self.value += card_values[card.strip()]
 
   def print_value(self):
-    if 'A ' in self.hand:
+    if 'A ' in self.hand and (self.value + 10 < 22):
       print('{} or {}'.format(self.value, self.value+10))
       
     else:

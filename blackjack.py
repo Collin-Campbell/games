@@ -239,7 +239,7 @@ def game(name,player_pot,wager):
         player_pot -= wager
         return player_pot
       response = ''
-      while response not in ['HIT','STAY']:
+      while response not in ['HIT','STAY'] and one_hit == '':
         response = input('\nHit or Stay?:  ').strip().upper()
       if response == 'STAY' or one_hit == 'YES':
         if 'A ' in name.hand and (name.value + 10) < 22:

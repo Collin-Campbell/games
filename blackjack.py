@@ -2,6 +2,19 @@ import random
 import time
 import sys
 
+instructions = """
+General rules for how to play Blackjack can be found at:
+
+https://bicyclecards.com/how-to-play/blackjack/
+
+Things to know:
+-A blackjack (A and K/Q/J/10) pays out x1.5 unless the dealer also has a blackjack, which results in a push
+-‘Doubling down’ (possible if total of first two cards dealt equals 9, 10 or 11) doubles the wager and results in only taking one more card
+-A push with the dealer results in no exchange of coins
+-House/dealer wins if player goes over 21 first, regardless of dealer’s cards
+-This version does not allow splitting because the display for two hands would be too large if side-by-side and unreadable if stacked
+"""
+
 class Hand:
 
   def __init__(self,hand=[],display=[],value=0):
@@ -514,6 +527,7 @@ def game(name,player_pot,wager):
   
 
 if __name__ == '__main__':
+  print(instructions)
   name = input('\nName, please:  ')
   time.sleep(1)
   print('\n\nOkay {}, place your bet!'.format(name))

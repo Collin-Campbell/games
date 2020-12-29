@@ -1,5 +1,6 @@
 # A collection of simple python games!
 - run the .py file of the game you want to play!
+- Note: capitalization of inputs does not matter
 
 To play on Google Colab, run these 3 commands:
 

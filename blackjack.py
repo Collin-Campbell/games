@@ -107,7 +107,6 @@ def game(name,player_pot,wager):
   name.print_value()
   time.sleep(2)
   response = ''
-  one_hit = ''
   if name.value in [9,10,11] and (player_pot >= wager*2):
     double_down = ''
     while double_down not in ['YES','NO','Y','N']:
@@ -516,17 +515,19 @@ def game(name,player_pot,wager):
 if __name__ == '__main__':
   name = input('\nName, pleeease...  ')
   time.sleep(1)
-  print('\n\nOK {}, place your bets!'.format(name))
+  print('\n\nOK {}, place your bet!'.format(name))
   player_pot = 100
   wager = 0
   while wager <= 0 or wager > player_pot:
     wager = int((input('\nYou currently have {} coins, what will you wager?  '.format(player_pot))).strip())
   time.sleep(3)
+  one_hit = ''
   player_pot = game(name,player_pot,wager)
   wager = 0
 
   leave_table = ''
   while leave_table not in ['YES','Y']:
+    one_hit = ''
     time.sleep(3)
     if player_pot == 0:
       sys.exit('\n\nYou ran out of coins... better luck next time.\n\n')
@@ -534,7 +535,7 @@ if __name__ == '__main__':
     time.sleep(2)
     if leave_table in ['YES','Y']:
       sys.exit('\n\nFinal coin count: {} coins\n\n'.format(player_pot))
-    print('\n\nOK {}, place your bets!'.format(name))
+    print('\n\nOK {}, place your bet!'.format(name))
     while wager <= 0 or wager > player_pot:
       wager = int((input('\nYou currently have {} coins, what will you wager?  '.format(player_pot))).strip())
     time.sleep(3)

@@ -107,6 +107,7 @@ def game(name,player_pot,wager):
   name.print_value()
   time.sleep(2)
   response = ''
+  one_hit = ''
   if name.value in [9,10,11] and (player_pot >= wager*2):
     double_down = ''
     while double_down not in ['YES','NO','Y','N']:
@@ -199,7 +200,7 @@ def game(name,player_pot,wager):
     response = ''
     while response not in ['HIT','STAY']:
       response = input('\nHit or Stay?:  ').strip().upper()
-    if response == 'STAY' or one_hit == 'YES':
+    if response == 'STAY':
       if 'A ' in name.hand and (name.value + 10) < 22:
         name.value += 10
       time.sleep(2)
@@ -240,7 +241,7 @@ def game(name,player_pot,wager):
       response = ''
       while response not in ['HIT','STAY']:
         response = input('\nHit or Stay?:  ').strip().upper()
-      if response == 'STAY':
+      if response == 'STAY' or one_hit == 'YES':
         if 'A ' in name.hand and (name.value + 10) < 22:
           name.value += 10
         time.sleep(2)
@@ -521,13 +522,11 @@ if __name__ == '__main__':
   while wager <= 0 or wager > player_pot:
     wager = int((input('\nYou currently have {} coins, what will you wager?  '.format(player_pot))).strip())
   time.sleep(3)
-  one_hit = ''
   player_pot = game(name,player_pot,wager)
   wager = 0
 
   leave_table = ''
   while leave_table not in ['YES','Y']:
-    one_hit = ''
     time.sleep(3)
     if player_pot == 0:
       sys.exit('\n\nYou ran out of coins... better luck next time.\n\n')

@@ -9,12 +9,13 @@ https://bicyclecards.com/how-to-play/blackjack/
 
 Things to know:
 
-- A blackjack (A and K/Q/J/10) pays out x1.5 unless the dealer also has a blackjack, which results in a push
-- A push or tie with the dealer results in no exchange of coins
-- ‘Doubling down’ (possible if total of first two cards dealt equals 9, 10 or 11) doubles the wager
-- Choosing to double down results in only being able to take one more card
-- House/dealer wins if player goes over 21 first, regardless of dealer’s cards
-- This version does not allow for splitting mainly due to the display
+- An Ace counts as 1 or 11. Face cards count as 10.
+- A blackjack (A and K/Q/J/10) pays out x1.5 unless the dealer also has a blackjack, which results in a push.
+- A push or tie with the dealer results in no exchange of coins.
+- ‘Doubling down’ (possible if total of first two cards dealt equals 9, 10 or 11) doubles the wager.
+- Choosing to double down results in only being able to take one more card.
+- House/dealer wins if player goes over 21 first, regardless of dealer’s cards.
+- This version does not allow for splitting mainly due to the display.
 """
 
 class Hand:

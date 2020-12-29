@@ -172,7 +172,7 @@ def game(name,player_pot,wager):
   #dealer.value is dealer's final score
   #dealer.print_hand() is dealer's cards displayed
 
-  time.sleep(2)
+  time.sleep(1)
   while response not in ['HIT','STAY']:
     response = input('\nHit or Stay?:  ').strip().upper()
   if response == 'STAY':
@@ -208,7 +208,7 @@ def game(name,player_pot,wager):
     time.sleep(2)
     print('\nYour total:')
     name.print_value()
-    time.sleep(2)
+    time.sleep(1)
     if name.value > 21:
       print('\nBusted!')
       player_pot -= wager
@@ -249,7 +249,7 @@ def game(name,player_pot,wager):
       time.sleep(2)
       print('\nYour total:')
       name.print_value()
-      time.sleep(2)
+      time.sleep(1)
       if name.value > 21:
         print('\nBusted!')
         player_pot -= wager
@@ -290,7 +290,7 @@ def game(name,player_pot,wager):
         time.sleep(2)
         print('\nYour total:')
         name.print_value()
-        time.sleep(2)
+        time.sleep(1)
         if name.value > 21:
           print('\nBusted!')
           player_pot -= wager
@@ -331,7 +331,7 @@ def game(name,player_pot,wager):
           time.sleep(2)
           print('\nYour total:')
           name.print_value()
-          time.sleep(2)
+          time.sleep(1)
           if name.value > 21:
             print('\nBusted!')
             player_pot -= wager
@@ -372,7 +372,7 @@ def game(name,player_pot,wager):
             time.sleep(2)
             print('\nYour total:')
             name.print_value()
-            time.sleep(2)
+            time.sleep(1)
             if name.value > 21:
               print('\nBusted!')
               player_pot -= wager
@@ -413,7 +413,7 @@ def game(name,player_pot,wager):
               time.sleep(2)
               print('\nYour total:')
               name.print_value()
-              time.sleep(2)
+              time.sleep(1)
               if name.value > 21:
                 print('\nBusted!')
                 player_pot -= wager
@@ -454,7 +454,7 @@ def game(name,player_pot,wager):
                 time.sleep(2)
                 print('\nYour total:')
                 name.print_value()
-                time.sleep(2)
+                time.sleep(1)
                 if name.value > 21:
                   print('\nBusted!')
                   player_pot -= wager
@@ -495,7 +495,7 @@ def game(name,player_pot,wager):
                   time.sleep(2)
                   print('\nYour total:')
                   name.print_value()
-                  time.sleep(2)
+                  time.sleep(1)
                   if name.value > 21:
                     print('\nBusted!')
                     player_pot -= wager

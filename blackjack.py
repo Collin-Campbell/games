@@ -78,6 +78,7 @@ def game(name,player_pot,wager):
   print("\nDealer's up card:")
   dealer.print_hand() 
   dealer.deal_card() # dealer's second card, not showing, but will use to check for blackjack
+  time.sleep(2)
   print('\nYour hand:')
   name.print_hand()
   time.sleep(2)

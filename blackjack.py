@@ -517,7 +517,7 @@ if __name__ == '__main__':
   print('\n\nOK {}, place your bets!'.format(name))
   player_pot = 100
   wager = 0
-  while wager == 0 or wager > player_pot:
+  while wager <= 0 or wager > player_pot:
     wager = int((input('\nYou currently have {} coins, what will you wager?  '.format(player_pot))).strip())
   time.sleep(3)
   player_pot = game(name,player_pot,wager)
@@ -533,7 +533,7 @@ if __name__ == '__main__':
     if leave_table in ['YES','Y']:
       sys.exit('\n\nFinal coin count: {} coins\n\n'.format(player_pot))
     print('\n\nOK {}, place your bets!'.format(name))
-    while wager == 0 or wager > player_pot:
+    while wager <= 0 or wager > player_pot:
       wager = int((input('\nYou currently have {} coins, what will you wager?  '.format(player_pot))).strip())
     time.sleep(3)
     player_pot = game(name,player_pot,wager)

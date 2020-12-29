@@ -107,6 +107,7 @@ def game(name,player_pot,wager):
   name.print_value()
   time.sleep(2)
   response = ''
+  one_hit = ''
   if name.value in [9,10,11] and (player_pot >= wager*2):
     double_down = ''
     while double_down not in ['YES','NO','Y','N']:
@@ -114,6 +115,7 @@ def game(name,player_pot,wager):
     if double_down in ['YES','Y']:
       wager += wager
       response = 'HIT'
+      one_hit = 'YES'
 
   # Since dealer's up card has been printed, can finish out dealer's hand on the backend:
   if 'A ' in dealer.hand and (dealer.value + 10) > 16 and (dealer.value + 10) < 22:
@@ -198,7 +200,7 @@ def game(name,player_pot,wager):
     response = ''
     while response not in ['HIT','STAY']:
       response = input('\nHit or Stay?:  ').strip().upper()
-    if response == 'STAY' or double_down in ['YES','Y']:
+    if response == 'STAY' or one_hit == 'YES':
       if 'A ' in name.hand and (name.value + 10) < 22:
         name.value += 10
       time.sleep(2)

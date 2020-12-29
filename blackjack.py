@@ -106,7 +106,7 @@ def game(name,player_pot,wager):
   name.print_value()
   time.sleep(2)
   response = ''
-  if name.value in [9,10,11] and (player_pot > wager*2):
+  if name.value in [9,10,11] and (player_pot >= wager*2):
     double_down = ''
     while double_down not in ['YES','NO','Y','N']:
       double_down = (input('\nWould you like to double down? (Y/N)  ')).strip().upper()

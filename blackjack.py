@@ -8,11 +8,13 @@ General rules for how to play Blackjack can be found at:
 https://bicyclecards.com/how-to-play/blackjack/
 
 Things to know:
--A blackjack (A and K/Q/J/10) pays out x1.5 unless the dealer also has a blackjack, which results in a push
--‘Doubling down’ (possible if total of first two cards dealt equals 9, 10 or 11) doubles the wager and results in only taking one more card
--A push with the dealer results in no exchange of coins
--House/dealer wins if player goes over 21 first, regardless of dealer’s cards
--This version does not allow splitting because the display for two hands would be too large if side-by-side and unreadable if stacked
+
+- A blackjack (A and K/Q/J/10) pays out x1.5 unless the dealer also has a blackjack, which results in a push
+- A push or tie with the dealer results in no exchange of coins
+- ‘Doubling down’ (possible if total of first two cards dealt equals 9, 10 or 11) doubles the wager
+- Choosing to double down results in only being able to take one more card
+- House/dealer wins if player goes over 21 first, regardless of dealer’s cards
+- This version does not allow for splitting mainly due to the display
 """
 
 class Hand:

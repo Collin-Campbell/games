@@ -46,7 +46,7 @@ def round(level):
     answer = ''
 
     while answer not in acceptable_responses:
-        answer = (input('\n\nPick a box (ex: a1, D4):  ')).upper().strip() 
+        answer = (input('\n\nPick a box (ex: a1 or D4):  ')).upper().strip() 
 
     for _ in range(level*3):
         random.choice(row)[random.randint(0,4)] = 'BOOM!'

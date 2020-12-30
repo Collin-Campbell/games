@@ -1,6 +1,10 @@
 # A collection of simple python games!
-- run the .py file of the game you want to play!
+- clone the repo
+- open terminal
+- navigate to the directory where the games are located
+- run the .py file of the game you want to play
 - Note: capitalization of inputs does not matter
+
 
 To play on Google Colab, run these 3 commands:
 

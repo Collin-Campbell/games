@@ -577,7 +577,11 @@ if __name__ == '__main__':
   player_pot = 100
   wager = 0
   while wager <= 0 or wager > player_pot:
-    wager = int((input('\nYou currently have {} coins, what will you wager?  '.format(player_pot))).strip())
+    try:
+      wager = int((input('\nYou currently have {} coins, what will you wager?  '.format(player_pot))).strip())
+    except ValueError:
+      print('\n Please input an integer value.')
+      continue
   time.sleep(3)
   player_pot = game(name,player_pot,wager)
   wager = 0
@@ -587,13 +591,17 @@ if __name__ == '__main__':
     time.sleep(3)
     if player_pot == 0:
       sys.exit('\n\nYou ran out of coins... better luck next time.\n\n')
-    leave_table = (input('\n\nLeave table? (Y/N)  ')).strip().upper()
+    leave_table = (input("\n\nLeave table? ('Yes' or 'Y' to exit game, anything else to continue)  ")).strip().upper()
     time.sleep(2)
     if leave_table in ['YES','Y']:
       sys.exit('\n\nFinal coin count: {} coins\n\n'.format(player_pot))
     print('\n\nOkay {}, place your bet!'.format(name))
     while wager <= 0 or wager > player_pot:
-      wager = int((input('\nYou currently have {} coins, what will you wager?  '.format(player_pot))).strip())
+      try:
+        wager = int((input('\nYou currently have {} coins, what will you wager?  '.format(player_pot))).strip())
+      except ValueError:
+        print('\n Please input an integer value.')
+        continue
     time.sleep(3)
     player_pot = game(name,player_pot,wager)
     wager = 0

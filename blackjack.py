@@ -214,6 +214,11 @@ def game(name,player_pot,wager):
       player_pot -= wager
       return player_pot
     response = ''
+    if name.value == 21:
+      response = 'STAY'
+    if 'A ' in name.hand and (name.value + 10) == 21:
+      name.value += 10
+      response = 'STAY'
     while response not in ['HIT','STAY'] and one_hit == '':
       response = input('\nHit or Stay?:  ').strip().upper()
     if response == 'STAY' or one_hit == 'YES':
@@ -255,6 +260,11 @@ def game(name,player_pot,wager):
         player_pot -= wager
         return player_pot
       response = ''
+      if name.value == 21:
+        response = 'STAY'
+      if 'A ' in name.hand and (name.value + 10) == 21:
+        name.value += 10
+        response = 'STAY'
       while response not in ['HIT','STAY']:
         response = input('\nHit or Stay?:  ').strip().upper()
       if response == 'STAY':
@@ -296,6 +306,11 @@ def game(name,player_pot,wager):
           player_pot -= wager
           return player_pot
         response = ''
+        if name.value == 21:
+          response = 'STAY'
+        if 'A ' in name.hand and (name.value + 10) == 21:
+          name.value += 10
+          response = 'STAY'
         while response not in ['HIT','STAY']:
           response = input('\nHit or Stay?:  ').strip().upper()
         if response == 'STAY':
@@ -337,6 +352,11 @@ def game(name,player_pot,wager):
             player_pot -= wager
             return player_pot
           response = ''
+          if name.value == 21:
+            response = 'STAY'
+          if 'A ' in name.hand and (name.value + 10) == 21:
+            name.value += 10
+            response = 'STAY'
           while response not in ['HIT','STAY']:
             response = input('\nHit or Stay?:  ').strip().upper()
           if response == 'STAY':
@@ -378,6 +398,11 @@ def game(name,player_pot,wager):
               player_pot -= wager
               return player_pot
             response = ''
+            if name.value == 21:
+              response = 'STAY'
+            if 'A ' in name.hand and (name.value + 10) == 21:
+              name.value += 10
+              response = 'STAY'
             while response not in ['HIT','STAY']:
               response = input('\nHit or Stay?:  ').strip().upper()
             if response == 'STAY':
@@ -419,6 +444,11 @@ def game(name,player_pot,wager):
                 player_pot -= wager
                 return player_pot
               response = ''
+              if name.value == 21:
+                response = 'STAY'
+              if 'A ' in name.hand and (name.value + 10) == 21:
+                name.value += 10
+                response = 'STAY'
               while response not in ['HIT','STAY']:
                 response = input('\nHit or Stay?:  ').strip().upper()
               if response == 'STAY':
@@ -460,6 +490,11 @@ def game(name,player_pot,wager):
                   player_pot -= wager
                   return player_pot
                 response = ''
+                if name.value == 21:
+                  response = 'STAY'
+                if 'A ' in name.hand and (name.value + 10) == 21:
+                  name.value += 10
+                  response = 'STAY'
                 while response not in ['HIT','STAY']:
                   response = input('\nHit or Stay?:  ').strip().upper()
                 if response == 'STAY':
@@ -501,6 +536,11 @@ def game(name,player_pot,wager):
                     player_pot -= wager
                     return player_pot
                   response = ''
+                  if name.value == 21:
+                    response = 'STAY'
+                  if 'A ' in name.hand and (name.value + 10) == 21:
+                    name.value += 10
+                    response = 'STAY'
                   while response not in ['HIT','STAY']:
                     response = input('\nHit or Stay?:  ').strip().upper()
                   if response == 'STAY':

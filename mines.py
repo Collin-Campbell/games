@@ -46,7 +46,7 @@ def round(level):
     answer = ''
 
     while answer not in acceptable_responses:
-        answer = (input('\n\nPick a box (ex: a1 or D4):  ')).upper().strip() 
+        answer = (input('\n\nPick a box (ex: a1):  ')).upper().strip() 
 
     for _ in range(level*2):
         random.choice(row)[random.randint(0,4)] = 'BOOM!'
@@ -86,7 +86,7 @@ def round(level):
     mydict = {'a':a,'b':b,'c':c,'d':d,'e':e}
 
     if (mydict[answer.lower()[0]])[int(answer[1])-1] == 'BOOM!':
-        sys.exit("\n\nOuch... better luck next time!\n\n")
+        sys.exit("\n\nOops... better luck next time!\n\n")
     else:
         print('\n\nWhew!\n\n')
 

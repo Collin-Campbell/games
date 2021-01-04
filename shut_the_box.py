@@ -77,7 +77,7 @@ def shut_the_box(name):
   sum1 = 0
   while sum1 != int(first_roll):
     try:
-      first_move = list(set((input('\nHow will you play?  ')).upper().strip().split(',')))
+      first_move = list(set((input('\nHow will you play? (example for roll of 8 = 1,3,4)  ')).upper().strip().split(',')))
       for item in first_move:
         if item == 'DONE':
           score = 0

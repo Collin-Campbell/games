@@ -46,18 +46,18 @@ def round(level):
     answer = ''
 
     while answer not in acceptable_responses:
-        answer = (input('\n\nPick a box (ex: a1):  ')).upper().strip() 
+        answer = (input('\n\nPick a box:  ')).upper().strip() 
 
     for _ in range(level*2):
         random.choice(row)[random.randint(0,4)] = 'BOOM!'
     random.choice(row)[random.randint(0,4)] = '.....'
 
     print('\n\ttick...') 
-    time.sleep(1)
+    time.sleep(0.5)
     print('\n\ttick...') 
-    time.sleep(1)
+    time.sleep(0.5)
     print('\n\ttick...\n\n')
-    time.sleep(3)
+    time.sleep(1)
 
     print(('                         LVL {}').format(number))
     print('    -------------------------------------------------')
@@ -83,19 +83,21 @@ def round(level):
     print('    -------------------------------------------------')
     print('        1         2         3         4         5')
 
-    mydict = {'a':a,'b':b,'c':c,'d':d,'e':e}
+    box_letters = {'a':a,'b':b,'c':c,'d':d,'e':e}
 
-    if (mydict[answer.lower()[0]])[int(answer[1])-1] == 'BOOM!':
+    if (box_letters[answer.lower()[0]])[int(answer[1])-1] == 'BOOM!':
         sys.exit("\n\nOops... better luck next time!\n\n")
     else:
         print('\n\nWhew!\n\n')
 
-    time.sleep(7)
+    time.sleep(4)
 
 
 if __name__ == '__main__':
     print('\n\nMake it through 10 levels to win the game... good luck!\n\n')
-    time.sleep(5)
+    time.sleep(2)
+    print('Example of acceptable box choice = a1\n')
+    time.sleep(2)
     for num in range(1,11):
         round(num)
-    print('\n\nCongratulations! You survived!\n\n')
+    print('\n\nCongratulations! You beat every level!\n\n')
